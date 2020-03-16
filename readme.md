@@ -1,6 +1,6 @@
 #P3-Dynamisez une page web avec des animations CSS
 
-##Compétences évaluées
+#Compétences évaluées
 
 Mettre en œuvre des effets CSS graphiques avancés,
 assurer la cohérence graphique d'un site web,
