@@ -3,24 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>Document</title>
   </head>
-  <header>
-    <div class="menu menu--active">
-      <img class="menu__img" src="img/logo.png" alt="" />
-    </div>
-  </header>
-  <main>
-    <section>
-      <img src="img/menu-1b.png" alt="" />
-    </section>
-    <button>Prochainement</button>
-  </main>
-  <nav>
-    <button>Mentions Légales</button>
-    <button>Contactez-nous</button>
-  </nav>
-  <body></body>
+  <body>
+    <header class="logo">
+      <img class="logo__img" src="img/logo.png" alt="image logo ohmyfood" />
+    </header>
+    <main class="content">
+      <section class="content__card content__card--active">
+        <a href="#"
+          ><img
+            class="content__card__img"
+            src="img/menu-1b.png"
+            alt="menu la note enchantee"
+        /></a>
+      </section>
+      <section class="content__card content__card--active">
+        <a href="#"
+          ><img
+            class="content__card__img"
+            src="img/menu-2b.png"
+            alt="menu la chic a la française"
+        /></a>
+      </section>
+    </main>
+    <button class="button">
+      <div class="button__text">Prochainement</div>
+    </button>
+    <nav class="navbar">
+      <div class="navbar__link">Mentions Légales</div>
+      <div class="navbar__link">Contactez-nous</div>
+    </nav>
+  </body>
 </html>
