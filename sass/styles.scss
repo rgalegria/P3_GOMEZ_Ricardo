@@ -1,61 +1,133 @@
+@import "fonts";
 @import "init";
 @import "variables";
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 body {
   font-family: "Montserrat", sans-serif;
   color: $yellow;
 }
 
-.logo {
+a {
+  color: $yellow;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $yellow;
+  text-decoration: underline;
+}
+
+.header {
   display: flex;
-  padding: 3em;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5em 0;
   background-color: $light-green;
 
-  &__img {
-    display: block;
-    width: 500px;
-    padding: 1em;
+  &__logo {
+    width: 175px;
     margin: auto;
+
+    &__img {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
 
 .content {
-  display: grid;
-  grid-template: repeat(2, 700px) / repeat(2, 1fr);
-  padding: 6em 10em;
-  gap: 6em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8em;
+
+  &__title {
+    font-size: 3em;
+    margin: 0 auto;
+    color: black;
+  }
+
+  &__wrapper {
+    max-width: 485px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2em;
+    margin: 0 auto;
+
+    &__card {
+      overflow: hidden;
+      box-shadow: 0px 0px 7px 0px rgba(126, 126, 126, 0.3);
+
+      &__img {
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0%;
+  transition: 0.3s ease;
+  background-color: rgb(66, 66, 66);
+
+  &:hover {
+    opacity: 0.85;
+  }
 }
 
 .button {
-  display: flex;
-  justify-items: center;
-  align-items: center;
   background-color: $light-green;
-  margin-bottom: 17em;
+  max-width: 19em;
+  border-radius: 0.5em;
+  padding: 0.3em;
+  margin: 2em auto;
+  text-align: center;
 
-  &__text {
-    font-size: 4em;
-    font-weight: 600;
-    color: &yellow;
-    text-align: center;
-    padding: 0.2em;
-    width: 100%;
+  &__link {
+    font-size: 1.5em;
+    font-weight: 500;
   }
 }
 
 .navbar {
   display: flex;
+  flex-direction: row;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-color: $light-green;
 
-  &__link {
-    font-size: 3em;
-    font-weight: 600;
+  &__button {
+    font-size: 1.2em;
     text-align: center;
-    padding: 0.7em;
+    color: #fdcb46;
+    text-decoration: none;
+    padding: 0.5em;
+    margin: auto auto auto 0;
   }
+}
+
+@import "menu-1";
+@import "menu-2";
+@import "menu-3";
+@import "menu-4";
+
+#container:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }

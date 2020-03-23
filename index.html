@@ -1,40 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <title>Document</title>
+    <title>Ohmyfood</title>
   </head>
   <body>
-    <header class="logo">
-      <img class="logo__img" src="img/logo.png" alt="image logo ohmyfood" />
+    <header class="header">
+      <div class="header__logo">
+        <a href="index.html">
+          <img
+            class="header__logo__img"
+            src="img/logo.png"
+            alt="image logo ohmyfood"
+        /></a>
+      </div>
     </header>
     <main class="content">
-      <section class="content__card content__card--active">
-        <a href="#"
-          ><img
-            class="content__card__img"
-            src="img/menu-1b.png"
-            alt="menu la note enchantee"
-        /></a>
-      </section>
-      <section class="content__card content__card--active">
-        <a href="#"
-          ><img
-            class="content__card__img"
-            src="img/menu-2b.png"
-            alt="menu la chic a la française"
-        /></a>
-      </section>
+      <div class="content__wrapper">
+        <div class="content__wrapper__card">
+          <a href="menu-1.html">
+            <!-- <div class="overlay"> -->
+            <img
+              class="content__wrapper__card__img"
+              src="img/menu-1b.png"
+              alt="menu la note enchantee"
+            />
+            <!-- </div> -->
+          </a>
+        </div>
+        <div class="content__wrapper__card content__wrapper__card--active">
+          <a href="menu-2.html">
+            <img
+              class="content__wrapper__card__img"
+              src="img/menu-2b.png"
+              alt="menu la note enchantee"
+            />
+          </a>
+        </div>
+        <div class="content__wrapper__card content__wrapper__card--active">
+          <a href="menu-3.html">
+            <img
+              class="content__wrapper__card__img"
+              src="img/menu-3b.png"
+              alt="menu la note enchantee"
+            />
+          </a>
+        </div>
+        <div class="content__wrapper__card content__wrapper__card--active">
+          <a href="menu-4.html">
+            <img
+              class="content__wrapper__card__img"
+              src="img/menu-4b.png"
+              alt="menu la note enchantee"
+            />
+          </a>
+        </div>
+      </div>
     </main>
-    <button class="button">
-      <div class="button__text">Prochainement</div>
-    </button>
+    <div class="button">
+      <a class="button__link" href="#">Prochainement</a>
+    </div>
     <nav class="navbar">
-      <div class="navbar__link">Mentions Légales</div>
-      <div class="navbar__link">Contactez-nous</div>
+      <div class="navbar__button">
+        <a href="blank.html" target="_blank">Mentions Légales</a>
+      </div>
+      <a href="mailto:contact@ohmyfood.com"
+        ><div class="navbar__button">Contactez-nous</div></a
+      >
     </nav>
   </body>
 </html>

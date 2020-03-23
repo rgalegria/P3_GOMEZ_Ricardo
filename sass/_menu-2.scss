@@ -1,0 +1,76 @@
+.menu2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 992px;
+  margin: 2em auto;
+  padding: 0em 3em 8em 3em;
+  background-color: $bg-m2;
+  box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin: 3em auto;
+
+    &__title {
+      font-family: $m2-title;
+      background: linear-gradient(to right, $sect1-m2 0%, $sect3-m2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 4em;
+      font-weight: 600;
+      padding: 1em 0.1em;
+      margin: 0;
+    }
+  }
+
+  &__section {
+    font-family: "Segoe Print", cursive;
+    flex-direction: row;
+    margin-bottom: 4em;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 2em;
+
+      &__span {
+        margin: auto 0;
+      }
+
+      &__title {
+        font-family: $m2-S-title;
+        font-size: 1.7em;
+        white-space: nowrap;
+        margin: 0 auto;
+        padding: 0 0.5em;
+      }
+    }
+
+    &__txt {
+      font-family: $m2-p;
+      font-size: 1.35em;
+      display: flex;
+      padding: 0 5em;
+    }
+
+    &__price {
+      font-size: 1.3em;
+      font-weight: 500;
+      margin: 0 0 auto auto;
+      padding-left: 0.2em;
+    }
+  }
+}
+
+#m2-section-1 {
+  color: $sect1-m2;
+}
+
+#m2-section-2 {
+  color: $sect2-m2;
+}
+
+#m2-section-3 {
+  color: $sect3-m2;
+}
