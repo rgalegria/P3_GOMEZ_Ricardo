@@ -1,3 +1,7 @@
+/*---------------------------------*/
+/*          _menu-4.scss          */
+/*-------------------------------*/
+
 .menu4 {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,7 @@
   color: black;
   font-size: 1.2em;
   max-width: 992px;
-  margin: 2em auto;
+  margin: 2.5em auto 10em auto;
   padding: 0em 3em 10em 3em;
   background-color: $bg-m4;
   box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
@@ -39,14 +43,35 @@
 
       &__span {
         margin: auto 0;
+        max-width: 300px;
       }
 
       &__title {
+        position: relative;
         font-size: 1.35em;
         font-weight: 600;
         white-space: nowrap;
         margin: 0 auto;
         padding: 0 0.5em;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: black;
+          visibility: hidden;
+          transform-origin: 0% 50%;
+          transform: scaleX(0);
+          transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+        }
+
+        &:hover::before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
       }
     }
 

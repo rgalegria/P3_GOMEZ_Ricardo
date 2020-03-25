@@ -8,68 +8,101 @@
     <title>Ohmyfood</title>
   </head>
   <body>
+    <!--Header-->
+
     <header class="header">
-      <div class="header__logo">
+      <nav class="header__logo">
         <a href="index.html">
           <img
             class="header__logo__img"
             src="img/logo.png"
             alt="image logo ohmyfood"
         /></a>
-      </div>
+      </nav>
     </header>
     <main class="content">
       <div class="content__wrapper">
+        <!--Card 1-->
+
         <div class="content__wrapper__card">
           <a href="menu-1.html">
-            <!-- <div class="overlay"> -->
             <img
               class="content__wrapper__card__img"
               src="img/menu-1b.png"
-              alt="menu la note enchantee"
+              alt="menu la note enchantée"
             />
-            <!-- </div> -->
           </a>
         </div>
-        <div class="content__wrapper__card content__wrapper__card--active">
+
+        <!--Card 2-->
+
+        <div class="content__wrapper__card">
           <a href="menu-2.html">
             <img
               class="content__wrapper__card__img"
               src="img/menu-2b.png"
-              alt="menu la note enchantee"
+              alt="le chic à la française"
             />
           </a>
         </div>
-        <div class="content__wrapper__card content__wrapper__card--active">
+
+        <!--Card 3-->
+
+        <div class="content__wrapper__card">
           <a href="menu-3.html">
             <img
               class="content__wrapper__card__img"
               src="img/menu-3b.png"
-              alt="menu la note enchantee"
+              alt="le délice des papilles"
             />
           </a>
         </div>
-        <div class="content__wrapper__card content__wrapper__card--active">
+
+        <!--Card 4-->
+
+        <div class="content__wrapper__card">
           <a href="menu-4.html">
             <img
               class="content__wrapper__card__img"
               src="img/menu-4b.png"
-              alt="menu la note enchantee"
+              alt="la palette du goût"
             />
           </a>
         </div>
       </div>
-    </main>
-    <div class="button">
-      <a class="button__link" href="#">Prochainement</a>
-    </div>
-    <nav class="navbar">
-      <div class="navbar__button">
-        <a href="blank.html" target="_blank">Mentions Légales</a>
+
+      <!--Button-->
+
+      <div class="button">
+        <a class="button__link" href="#">
+          <h2 class="button__title">Prochainement</h2>
+          <span class="button__dot"></span>
+          <span class="button__dot"></span>
+          <span class="button__dot"></span>
+        </a>
       </div>
-      <a href="mailto:contact@ohmyfood.com"
-        ><div class="navbar__button">Contactez-nous</div></a
-      >
-    </nav>
+    </main>
+
+    <!-- Nav Footer-->
+
+    <footer class="navbar">
+      <div class="navbar__wrapper">
+        <div class="navbar__wrapper__button">
+          <a
+            class="navbar__wrapper__button__link"
+            href="blank.html"
+            target="_blank"
+            ><h4>Mentions Légales</h4></a
+          >
+        </div>
+        <div class="navbar__wrapper__button">
+          <a
+            class="navbar__wrapper__button__link"
+            href="mailto:contact@ohmyfood.com"
+            ><h4>Contactez-nous</h4></a
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

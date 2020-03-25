@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*---------------------------------*/
-/*            fonts.scss          */
+/*           _fonts.scss          */
 /*-------------------------------*/
 /*          Main Fonts       */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -14,9 +14,9 @@
 @import url("https://fonts.googleapis.com/css?family=Dancing+Script:600&display=swap");
 /*       Menu 4 Fonts       */
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap");
-/* ------------------------*/
-/* _reset.scss 				     */
-/* ------------------------*/
+/*---------------------------------*/
+/*           _init.scss           */
+/*-------------------------------*/
 /* switching box model for all elements */
 html {
   -webkit-box-sizing: border-box;
@@ -181,7 +181,7 @@ a {
 }
 
 /*---------------------------------*/
-/*          variables.scss        */
+/*         _variables.scss        */
 /*-------------------------------*/
 /*---------------------------*/
 /*          Fonts           */
@@ -198,6 +198,9 @@ a {
 /*          Menu 2       */
 /*          Menu 3       */
 /*          Menu 4       */
+/*---------------------------------*/
+/*           _index.scss          */
+/*-------------------------------*/
 body {
   font-family: "Montserrat", sans-serif;
   color: #fdcb46;
@@ -210,7 +213,21 @@ a {
 
 a:hover {
   color: #fdcb46;
-  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
 }
 
 .header {
@@ -218,15 +235,14 @@ a:hover {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  position: fixed;
   top: 0;
   width: 100%;
-  padding: 1.5em 0;
+  padding: 1.7em 0;
   background-color: #579c87;
 }
 
 .header__logo {
-  width: 175px;
+  width: 200px;
   margin: auto;
 }
 
@@ -243,17 +259,17 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 8em;
+  margin-top: 2.5em;
 }
 
 .content__title {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0 auto;
   color: black;
 }
 
 .content__wrapper {
-  max-width: 485px;
+  max-width: 470px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -271,50 +287,110 @@ a:hover {
 }
 
 .content__wrapper__card__img {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  opacity: 0.6;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
 }
 
 .content__wrapper__card__img:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0%;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  background-color: #424242;
-}
-
-.overlay:hover {
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.6em;
+  margin: 2.2em auto;
   background-color: #579c87;
-  max-width: 19em;
-  border-radius: 0.5em;
-  padding: 0.3em;
-  margin: 2em auto;
-  text-align: center;
 }
 
 .button__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4em 1.5em;
+}
+
+.button__link:hover > .button__dot {
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+}
+
+.button__title {
   font-size: 1.5em;
   font-weight: 500;
+  margin: 0 0.2em 0 0;
+}
+
+.button__dot {
+  display: inline-block;
+  height: 6px;
+  width: 6px;
+  opacity: 1;
+  margin: 0.7em 0.3em 0 0;
+  border-radius: 50%;
+  background-color: #fdcb46;
+}
+
+.button__dot:nth-child(2) {
+  margin-left: 0.1em;
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.button__dot:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes opacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
 }
 
 .navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #579c87;
+  z-index: 20;
+}
+
+.navbar__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,22 +398,52 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #579c87;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
-.navbar__button {
+.navbar__wrapper__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.2em;
-  text-align: center;
-  color: #fdcb46;
-  text-decoration: none;
-  padding: 0.5em;
-  margin: auto auto auto 0;
+  margin: 0 auto;
 }
 
+.navbar__wrapper__button:hover {
+  -webkit-animation: shake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 4;
+          animation: shake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 4;
+}
+
+.navbar__wrapper__button__link {
+  padding: 0.7em 0;
+}
+
+@-webkit-keyframes shake {
+  25% {
+    -webkit-transform: translateX(2px) rotate(2deg);
+            transform: translateX(2px) rotate(2deg);
+  }
+  75% {
+    -webkit-transform: translateX(-2px) rotate(-2deg);
+            transform: translateX(-2px) rotate(-2deg);
+  }
+}
+
+@keyframes shake {
+  25% {
+    -webkit-transform: translateX(2px) rotate(2deg);
+            transform: translateX(2px) rotate(2deg);
+  }
+  75% {
+    -webkit-transform: translateX(-2px) rotate(-2deg);
+            transform: translateX(-2px) rotate(-2deg);
+  }
+}
+
+/*---------------------------------*/
+/*          _menu-1.scss          */
+/*-------------------------------*/
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,8 +452,8 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 1075px;
-  margin: 2em auto;
+  max-width: 992px;
+  margin: 2.5em auto 10em auto;
   padding: 3em 6em;
   background-color: #fcdfdb;
   color: #3d1319;
@@ -376,8 +482,6 @@ a:hover {
   font-family: "Ma Shan Zheng", cursive;
   font-size: 4em;
   font-weight: normal;
-  padding: 0;
-  margin: 0;
 }
 
 .menu__section {
@@ -401,13 +505,38 @@ a:hover {
 
 .menu__section__wrapper__span {
   margin: auto 0;
+  max-width: 250px;
 }
 
 .menu__section__wrapper__title {
+  position: relative;
   font-size: 2em;
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 0.5em;
+}
+
+.menu__section__wrapper__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #3d1319;
+  visibility: hidden;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+  transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+}
+
+.menu__section__wrapper__title:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu__section__txt {
@@ -443,12 +572,13 @@ a:hover {
 
 .menu__footer__title {
   font-family: "Ma Shan Zheng", cursive;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: normal;
-  padding: 0;
-  margin: 0;
 }
 
+/*---------------------------------*/
+/*          _menu-2.scss          */
+/*-------------------------------*/
 .menu2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -458,7 +588,7 @@ a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 992px;
-  margin: 2em auto;
+  margin: 2.5em auto 10em auto;
   padding: 0em 3em 8em 3em;
   background-color: #fff5fe;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
@@ -485,7 +615,6 @@ a:hover {
   font-size: 4em;
   font-weight: 600;
   padding: 1em 0.1em;
-  margin: 0;
 }
 
 .menu2__section {
@@ -510,14 +639,39 @@ a:hover {
 
 .menu2__section__wrapper__span {
   margin: auto 0;
+  max-width: 275px;
 }
 
 .menu2__section__wrapper__title {
+  position: relative;
   font-family: "Source Serif Pro", serif;
   font-size: 1.7em;
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 0.5em;
+}
+
+.menu2__section__wrapper__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #c67412;
+  visibility: hidden;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+  transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+}
+
+.menu2__section__wrapper__title:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu2__section__txt {
@@ -544,10 +698,21 @@ a:hover {
   color: #a56799;
 }
 
+#m2-titre-2:before {
+  background-color: #a56799;
+}
+
 #m2-section-3 {
   color: #6e4ccc;
 }
 
+#m2-titre-3:before {
+  background-color: #6e4ccc;
+}
+
+/*---------------------------------*/
+/*          _menu-3.scss          */
+/*-------------------------------*/
 .menu3 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,7 +725,7 @@ a:hover {
   color: black;
   font-size: 1.2em;
   max-width: 992px;
-  margin: 2em auto;
+  margin: 2.5em auto 10em auto;
   padding: 0em 3em 10em 3em;
   background-color: #edefef;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
@@ -612,14 +777,39 @@ a:hover {
 
 .menu3__section__wrapper__span {
   margin: auto 0;
+  max-width: 250px;
 }
 
 .menu3__section__wrapper__title {
+  position: relative;
   font-size: 1.35em;
   font-weight: 600;
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 0.5em;
+}
+
+.menu3__section__wrapper__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+  transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+}
+
+.menu3__section__wrapper__title:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu3__section__txt {
@@ -637,6 +827,9 @@ a:hover {
   padding-left: 0.2em;
 }
 
+/*---------------------------------*/
+/*          _menu-4.scss          */
+/*-------------------------------*/
 .menu4 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -649,7 +842,7 @@ a:hover {
   color: black;
   font-size: 1.2em;
   max-width: 992px;
-  margin: 2em auto;
+  margin: 2.5em auto 10em auto;
   padding: 0em 3em 10em 3em;
   background-color: #fdfffd;
   -webkit-box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
@@ -701,14 +894,39 @@ a:hover {
 
 .menu4__section__wrapper__span {
   margin: auto 0;
+  max-width: 300px;
 }
 
 .menu4__section__wrapper__title {
+  position: relative;
   font-size: 1.35em;
   font-weight: 600;
   white-space: nowrap;
   margin: 0 auto;
   padding: 0 0.5em;
+}
+
+.menu4__section__wrapper__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+  transition: 0.2s cubic-bezier(0.32, 0, 0.07, 1);
+}
+
+.menu4__section__wrapper__title:hover::before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menu4__section__txt {
@@ -724,10 +942,5 @@ a:hover {
   font-weight: 600;
   margin: 0 0 auto auto;
   padding-left: 0.2em;
-}
-
-#container:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
 }
 /*# sourceMappingURL=styles.css.map */

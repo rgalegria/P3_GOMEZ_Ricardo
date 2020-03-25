@@ -1,0 +1,186 @@
+/*---------------------------------*/
+/*           _index.scss          */
+/*-------------------------------*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: $yellow;
+}
+
+a {
+  color: $yellow;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $yellow;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.header {
+  display: flex;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  padding: 1.7em 0;
+  background-color: $light-green;
+
+  &__logo {
+    width: 200px;
+    margin: auto;
+
+    &__img {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+
+  &__title {
+    font-size: 2em;
+    margin: 0 auto;
+    color: black;
+  }
+
+  &__wrapper {
+    max-width: 470px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2em;
+    margin: 0 auto;
+
+    &__card {
+      overflow: hidden;
+      box-shadow: 0px 0px 7px 0px rgba(126, 126, 126, 0.3);
+
+      &__img {
+        opacity: 0.6;
+        transition: all 150ms ease-in;
+
+        &:hover {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  border-radius: 0.6em;
+  margin: 2.2em auto;
+  background-color: $light-green;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 0.4em 1.5em;
+  }
+
+  &__link:hover > &__dot {
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-name: opacity;
+  }
+
+  &__title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0.2em 0 0;
+  }
+
+  &__dot {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    opacity: 1;
+    margin: 0.7em 0.3em 0 0;
+    border-radius: 50%;
+    background-color: $yellow;
+
+    &:nth-child(2) {
+      margin-left: 0.1em;
+      animation-delay: -0.45s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+
+@keyframes opacity {
+  0%,
+  100% {
+    opacity: 1;
+    // transform: scale(1);
+  }
+  40% {
+    opacity: 0;
+    // transform: scale(0);
+  }
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: $light-green;
+  z-index: 20;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 992px;
+    margin: 0 auto;
+
+    &__button {
+      display: flex;
+      font-size: 1.2em;
+      margin: 0 auto;
+
+      &:hover {
+        animation: shake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 4;
+      }
+
+      &__link {
+        padding: 0.7em 0;
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(2px) rotate(2deg);
+  }
+
+  75% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+}
