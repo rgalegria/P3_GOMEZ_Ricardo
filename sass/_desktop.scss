@@ -55,27 +55,56 @@ p {
   flex-direction: column;
   margin-top: 2.5em;
 
+  @media (max-width: $mobile) {
+    margin: 1.5em;
+  }
+
   &__title {
     font-size: 2em;
     margin: 0 auto;
     color: black;
+
+    @media (max-width: $tablet) {
+      // opacity: 1;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 1.7em;
+    }
   }
 
   &__wrapper {
     max-width: 470px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
     gap: 2em;
     margin: 0 auto;
 
+    @media (max-width: $tablet) {
+      max-width: 515px;
+      gap: 2.5em;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
     &__card {
       overflow: hidden;
-      box-shadow: 0px 0px 7px 0px rgba(126, 126, 126, 0.3);
+      box-shadow: $card-shadow;
 
       &__img {
         opacity: 0.6;
         transition: all 150ms ease-in;
+
+        @media (max-width: $tablet) {
+          opacity: 1;
+        }
+
+        @media (max-width: $mobile) {
+          opacity: 1;
+        }
 
         &:hover {
           transform: scale(1.2);
@@ -91,6 +120,10 @@ p {
   border-radius: 0.6em;
   margin: 2.2em auto;
   background-color: $light-green;
+
+  @media (max-width: $mobile) {
+    margin: 2em auto 3.5em auto;
+  }
 
   &__link {
     display: flex;
@@ -149,7 +182,7 @@ p {
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   background-color: $light-green;
   z-index: 20;
 
@@ -163,6 +196,11 @@ p {
       display: flex;
       font-size: 1.2em;
       margin: 0 auto;
+
+      @media (max-width: $mobile) {
+        font-size: 1.1em;
+        // margin: 2em auto 3.5em auto;
+      }
 
       &:hover {
         animation: shake 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 4;

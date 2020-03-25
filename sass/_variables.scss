@@ -36,6 +36,11 @@ $m4-sect: "Segoe Print", cursive;
 $light-green: #579c87;
 $yellow: #fdcb46;
 
+/*         Shadows       */
+
+$card-shadow: 0px 0px 7px 0px rgba(126, 126, 126, 0.3);
+$menu-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
+
 /*          Menu 1       */
 
 $bg-m1: #fcdfdb;
@@ -60,3 +65,8 @@ $sect3-m3: #229df9;
 $bg-m4: #fdfffd;
 $sect1-m4: #3d923a;
 $sect2-m4: #beff7f;
+
+/*      Media Queries    */
+
+$mobile: 767px;
+$tablet: 991px;

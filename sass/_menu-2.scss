@@ -9,12 +9,28 @@
   margin: 2.5em auto 10em auto;
   padding: 0em 3em 8em 3em;
   background-color: $bg-m2;
-  box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
+  box-shadow: $menu-shadow;
+
+  @media (max-width: $tablet) {
+    margin: 2.5em 2em 10em 2em;
+    padding: 0em 2em 5em 2em;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    padding: 1em 1em 4em 1em;
+    margin: 1.5em 0 3em 0;
+  }
 
   &__header {
     display: flex;
     flex-direction: column;
     margin: 3em auto;
+
+    @media (max-width: $mobile) {
+      margin: 0;
+      padding: 4em 1em;
+    }
 
     &__title {
       font-family: $m2-title;
@@ -24,13 +40,21 @@
       font-size: 4em;
       font-weight: 600;
       padding: 1em 0.1em;
+
+      @media (max-width: $mobile) {
+        font-size: 3em;
+      }
     }
   }
 
   &__section {
-    font-family: "Segoe Print", cursive;
+    font-family: $m2-p;
     flex-direction: row;
     margin-bottom: 4em;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 2em;
+    }
 
     &__wrapper {
       display: flex;
@@ -40,6 +64,10 @@
       &__span {
         margin: auto 0;
         max-width: 275px;
+
+        @media (max-width: $mobile) {
+          display: none;
+        }
       }
 
       &__title {
@@ -49,6 +77,11 @@
         white-space: nowrap;
         margin: 0 auto;
         padding: 0 0.5em;
+
+        @media (max-width: $mobile) {
+          font-size: 1.5em;
+          padding: 0;
+        }
 
         &::before {
           content: "";
@@ -76,6 +109,18 @@
       font-size: 1.35em;
       display: flex;
       padding: 0 5em;
+
+      @media (max-width: $tablet) {
+        padding: 0 3em;
+      }
+
+      @media (max-width: $mobile) {
+        font-size: 1em;
+        flex-direction: column;
+        margin: 1em 0 1.5em 0;
+        text-align: center;
+        padding: 0;
+      }
     }
 
     &__price {
@@ -83,6 +128,11 @@
       font-weight: 500;
       margin: 0 0 auto auto;
       padding-left: 0.2em;
+
+      @media (max-width: $mobile) {
+        margin: 0.7em auto;
+        padding: 0;
+      }
     }
   }
 }

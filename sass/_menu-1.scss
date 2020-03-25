@@ -10,7 +10,18 @@
   padding: 3em 6em;
   background-color: $bg-m1;
   color: $txt-m1;
-  box-shadow: 0px 0px 17px 0px rgba(126, 126, 126, 0.5);
+  box-shadow: $menu-shadow;
+
+  @media (max-width: $tablet) {
+    margin: 2.5em 2em 10em 2em;
+    padding: 3em 4em;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    padding: 1em;
+    margin: 1.5em 0 3em 0;
+  }
 
   &__header {
     display: flex;
@@ -18,15 +29,28 @@
     margin: auto auto 2em auto;
     padding: 1em;
 
+    @media (max-width: $mobile) {
+      margin: 0;
+      padding: 4em 1em;
+    }
+
     &__img {
       width: 90px;
       margin: auto;
+
+      @media (max-width: $mobile) {
+        width: 65px;
+      }
     }
 
     &__title {
       font-family: $m1-title;
       font-size: 4em;
       font-weight: normal;
+
+      @media (max-width: $mobile) {
+        font-size: 3em;
+      }
     }
   }
 
@@ -35,6 +59,10 @@
     flex-direction: row;
     margin-bottom: 4em;
 
+    @media (max-width: $mobile) {
+      margin-bottom: 2em;
+    }
+
     &__wrapper {
       display: flex;
       flex-direction: row;
@@ -42,6 +70,10 @@
       &__span {
         margin: auto 0;
         max-width: 250px;
+
+        @media (max-width: $mobile) {
+          display: none;
+        }
       }
 
       &__title {
@@ -50,6 +82,11 @@
         white-space: nowrap;
         margin: 0 auto;
         padding: 0 0.5em;
+
+        @media (max-width: $mobile) {
+          font-size: 1.5em;
+          padding: 0;
+        }
 
         &::before {
           content: "";
@@ -75,6 +112,13 @@
     &__txt {
       font-size: 1.25em;
       display: flex;
+
+      @media (max-width: $mobile) {
+        font-size: 1em;
+        flex-direction: column;
+        margin: 1em 0 1.5em 0;
+        text-align: center;
+      }
     }
 
     &__price {
@@ -82,6 +126,11 @@
       font-weight: bold;
       margin: 0 0 auto auto;
       padding-left: 2em;
+
+      @media (max-width: $mobile) {
+        margin: 0.7em auto;
+        padding: 0;
+      }
     }
   }
 
@@ -94,12 +143,20 @@
       width: 40px;
       height: auto;
       margin: auto 0.5em auto 0;
+
+      @media (max-width: $mobile) {
+        width: 30px;
+      }
     }
 
     &__title {
       font-family: $m1-title;
       font-size: 3em;
       font-weight: normal;
+
+      @media (max-width: $mobile) {
+        font-size: 2.3em;
+      }
     }
   }
 }
