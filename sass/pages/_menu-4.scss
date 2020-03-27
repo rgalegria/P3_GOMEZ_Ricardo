@@ -1,0 +1,22 @@
+/*---------------------------------*/
+/*          _menu-4.scss          */
+/*-------------------------------*/
+
+.menu-4 {
+  font-family: $m4-sect;
+
+  background-color: $bg-m4;
+
+  &__header {
+    &__title {
+      font-family: $m4-title;
+      @include menu-gradient-title($sect1-m4, $sect2-m4);
+    }
+  }
+
+  &__section {
+    &__span {
+      max-width: 245px;
+    }
+  }
+}

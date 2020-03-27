@@ -1,0 +1,22 @@
+/*---------------------------------*/
+/*          _header.scss          */
+/*-------------------------------*/
+
+.header {
+  display: flex;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  padding: 1.7em 0;
+  background-color: $light-green;
+
+  &__logo {
+    width: 200px;
+    margin: auto;
+
+    &__img {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

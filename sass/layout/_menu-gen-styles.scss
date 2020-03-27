@@ -1,0 +1,47 @@
+/*---------------------------------*/
+/*      _menu-gen-styles.scss     */
+/*-------------------------------*/
+
+.general-style {
+  color: black;
+  padding: 0em 3em 10em 3em;
+
+  @media (max-width: $mobile) {
+    padding: 0em 1em 10em 1em;
+  }
+
+  &__header {
+    &__title {
+      margin: 0.5em 0;
+      font-size: 4em;
+      font-weight: 500;
+    }
+  }
+
+  &__section {
+    &__title {
+      font-size: 1.25em;
+      font-weight: 500;
+      margin: 0 auto;
+
+      &::before {
+        background-color: black;
+      }
+    }
+
+    &__txt {
+      font-size: 1.05em;
+      padding: 0 4em;
+
+      @media (max-width: $mobile) {
+        padding: 0;
+      }
+    }
+
+    &__price {
+      font-size: 1.19em;
+      font-weight: 500;
+      padding-left: 0.2em;
+    }
+  }
+}

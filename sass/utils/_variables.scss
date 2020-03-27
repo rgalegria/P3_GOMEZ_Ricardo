@@ -9,7 +9,7 @@
 /*          Menu 1       */
 
 $m1-title: "Ma Shan Zheng", cursive;
-$m1-sect: "Segoe Print", cursive;
+$m1-sect: "Kalam", cursive;
 
 /*          Menu 2       */
 
@@ -20,12 +20,12 @@ $m2-p: "PT Serif", serif;
 /*          Menu 3       */
 
 $m3-title: "Dancing Script", cursive;
-$m3-sect: "Segoe Print", cursive;
+$m3-sect: "Kalam", cursive;
 
 /*          Menu 4       */
 
 $m4-title: "Kaushan Script", cursive;
-$m4-sect: "Segoe Print", cursive;
+$m4-sect: "Kalam", cursive;
 
 /*---------------------------*/
 /*          Colors          */
@@ -69,4 +69,5 @@ $sect2-m4: #beff7f;
 /*      Media Queries    */
 
 $mobile: 767px;
-$tablet: 991px;
+$tablet: 1024px;
+$desktop: 1025px;

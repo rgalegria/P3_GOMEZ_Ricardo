@@ -1,0 +1,65 @@
+/*---------------------------------*/
+/*            _home.scss          */
+/*-------------------------------*/
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5em 0;
+
+  @media (max-width: $mobile) {
+    margin: 1em;
+  }
+
+  &__title {
+    font-size: 2em;
+    margin: 0 auto;
+    color: black;
+
+    @media (max-width: $mobile) {
+      font-size: 1.7em;
+    }
+  }
+
+  &__wrapper {
+    max-width: 470px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 2em;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      gap: 2.5em;
+    }
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      overflow: hidden;
+      box-shadow: $card-shadow;
+
+      &__img {
+        opacity: 0.6;
+        transition: all 150ms ease-in;
+
+        @media (min-width: $desktop) {
+          &:hover {
+            transform: scale(1.2);
+            opacity: 1;
+          }
+        }
+
+        @media (max-width: $tablet) {
+          opacity: 1;
+        }
+
+        @media (max-width: $mobile) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

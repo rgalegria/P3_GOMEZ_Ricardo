@@ -1,0 +1,84 @@
+/*---------------------------------*/
+/*          _menu-2.scss          */
+/*-------------------------------*/
+
+.menu-2 {
+  background-color: $bg-m2;
+  padding: 0 2em 10em 2em;
+
+  &__header {
+    &__title {
+      font-family: $m2-title;
+      font-size: 3em;
+      font-weight: 600;
+      padding: 1em 0.1em;
+      @include menu-gradient-title($sect1-m2, $sect3-m2);
+    }
+  }
+
+  &__section {
+    font-family: $m2-p;
+
+    &__span {
+      max-width: 222px;
+    }
+
+    &__title {
+      font-family: $m2-S-title;
+      font-size: 1.3em;
+    }
+
+    &__txt {
+      font-family: $m2-p;
+      padding: 0 4em;
+      margin: 1em 0;
+
+      @media (max-width: $mobile) {
+        padding: 0;
+      }
+    }
+
+    &__price {
+      font-size: 1.1em;
+      padding-left: 0.5em;
+    }
+  }
+
+  // &__footer {
+  //   &__img {
+  //     width: ;
+  //     height: ;
+  //   }
+
+  //   &__title {
+  //     font-family: ;
+  //     font-size: ;
+  //     font-weight: ;
+  //     margin: ;
+  //   }
+  // }
+}
+
+#m2-section-1 {
+  color: $sect1-m2;
+}
+
+#m2-title-1:before {
+  background-color: $sect1-m2;
+}
+
+#m2-section-2 {
+  color: $sect2-m2;
+}
+
+#m2-title-2:before {
+  background-color: $sect2-m2;
+}
+
+#m2-section-3 {
+  color: $sect3-m2;
+}
+
+#m2-title-3:before {
+  background-color: $sect3-m2;
+}

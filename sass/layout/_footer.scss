@@ -1,0 +1,19 @@
+/*---------------------------------*/
+/*          _footer.scss          */
+/*-------------------------------*/
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $light-green;
+  z-index: 20;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+}

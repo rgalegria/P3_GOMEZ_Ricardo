@@ -1,0 +1,21 @@
+/*---------------------------------*/
+/*          _menu-3.scss          */
+/*-------------------------------*/
+
+.menu-3 {
+  font-family: $m3-sect;
+  background-color: $bg-m3;
+
+  &__header {
+    &__title {
+      font-family: $m3-title;
+      @include menu-gradient-title($sect1-m3, $sect3-m3);
+    }
+  }
+
+  &__section {
+    &__span {
+      max-width: 230px;
+    }
+  }
+}

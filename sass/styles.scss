@@ -1,8 +1,19 @@
-@import "fonts";
-@import "init";
-@import "variables";
-@import "desktop";
-@import "menu-1";
-@import "menu-2";
-@import "menu-3";
-@import "menu-4";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/init";
+@import "./base/fonts";
+@import "./base/animations";
+
+@import "./components/buttons";
+
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/menu-structure";
+@import "./layout/menu-gen-styles";
+
+@import "./pages/home";
+@import "./pages/menu-1";
+@import "./pages/menu-2";
+@import "./pages/menu-3";
+@import "./pages/menu-4";
