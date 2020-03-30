@@ -268,23 +268,6 @@ samp {
   padding: 0.4em 1.5em;
 }
 
-.button__link:hover > .button__dot {
-  -webkit-animation-duration: 1.3s;
-          animation-duration: 1.3s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
-}
-
 .button__title {
   font-size: 1.5em;
   font-weight: 500;
@@ -299,6 +282,8 @@ samp {
   margin: 0.7em 0.3em 0 0;
   border-radius: 50%;
   background-color: #fdcb46;
+  -webkit-animation: 1.3s ease-in-out infinite both opacity;
+          animation: 1.3s ease-in-out infinite both opacity;
 }
 
 .button__dot:nth-child(2) {

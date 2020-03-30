@@ -14,15 +14,15 @@
     padding: 0.4em 1.5em;
   }
 
-  &__link:hover > &__dot {
-    animation-duration: 1.3s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-play-state: running;
-    animation-name: opacity;
-  }
+  // &__link:hover > &__dot {
+  //   animation-duration: 1.3s;
+  //   animation-timing-function: ease-in-out;
+  //   animation-iteration-count: infinite;
+  //   animation-direction: normal;
+  //   animation-fill-mode: both;
+  //   animation-play-state: running;
+  //   animation-name: opacity;
+  // }
 
   &__title {
     font-size: 1.5em;
@@ -38,6 +38,7 @@
     margin: 0.7em 0.3em 0 0;
     border-radius: 50%;
     background-color: $yellow;
+    animation: 1.3s ease-in-out infinite both opacity;
 
     &:nth-child(2) {
       margin-left: 0.1em;
