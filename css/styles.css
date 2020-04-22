@@ -652,7 +652,7 @@ samp {
       grid-template-columns: auto auto;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  gap: 2em;
+  grid-gap: 2em;
   margin: 0 auto;
 }
 
